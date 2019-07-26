@@ -3,7 +3,14 @@ import React, { Component } from "react";
 import ImageOne from "../assets/img/newlogo.png"
 
 class SectionOne extends Component {
-  state = {};
+  
+  state = {
+    heading:"5411 — Your Newest Machine Learning Helper",
+    subHeading:"Use machine learning (ML) to gain insights for your business.Easy to use with no coding or tech background needed.",
+    signUpButton:{title:'SIGN UP — IT’S FREE',url:'signup'},
+    demoButton:{title:'Demo',url:'https://www.cocolevio.com/products'}
+  };
+
   render() {
     return (
       <div className="hero-wrap">
@@ -16,25 +23,24 @@ class SectionOne extends Component {
           >
             <div className="vin-header-text one-forth pr-md-4 align-self-md-center">
               <h1 className="mb-4">
-                5411 — Your Newest Machine Learning Helper
+                {this.state.heading}
               </h1>
               <p className="mb-md-5 mb-sm-3">
-                Use machine learning (ML) to gain insights for your business.
-                Easy to use with no coding or tech background needed.
+                {this.state.subHeading}
               </p>
               <p>
                 <a
-                  href="/signup"
+                  href={this.state.signUpButton.url}
                   className="btn btn-primary cocobutton px-4 py-3"
                 >
-                  SIGN UP — IT’S FREE
+                  {this.state.signUpButton.title}
                 </a>
 
                 <a
-                  href="https://www.cocolevio.com/products"
+                  href={this.state.demoButton.url}
                   className="btn btn-outline-white  px-3 py-3 ml-3"
                 >
-                  VIEW DEMO
+                  {this.state.demoButton.title}
                 </a>
               </p>
             </div>
