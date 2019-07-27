@@ -2,9 +2,6 @@ import React, { Component } from "react";
 
 import Logo from "../assets/img/logo.png";
 
-var navStyle = {
-  filter: "invert(1)"
-};
 
 class Navbar extends Component {
   state = {
@@ -12,10 +9,18 @@ class Navbar extends Component {
   };
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light ftco_navbar bg-light  sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-light ftco_navbar  sticky-top" style={{background:"#fff"}}>
         <div className="container">
           <a className="navbar-brand" href="/">
-            <img src={Logo} style={navStyle} width="90" height="60" alt="" />
+            <img
+              src={Logo}
+              style={{
+                filter: "invert(1)"
+              }}
+              width="90"
+              height="60"
+              alt=""
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -31,9 +36,11 @@ class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="ftco-nav">
             <ul className="navbar-nav ml-auto">
-              {this.state.navItems.map(item => (
-                <li className="nav-item ">
-                  <a href={item} className="nav-link">{item}</a>
+              {this.state.navItems.map((item, index) => (
+                <li className="nav-item " key={index}>
+                  <a href={item} className="nav-link">
+                    {item}
+                  </a>
                 </li>
               ))}
             </ul>

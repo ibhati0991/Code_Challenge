@@ -2,10 +2,6 @@ import React, { Component } from "react";
 
 import ImageOne from "../assets/img/screenimage1.png";
 
-var sectionThreeStyle = {
-  backgroundColor: "#29CB7E"
-};
-
 class SectionThree extends Component {
   state = {
     title: "Data analysis simplified.",
@@ -21,7 +17,10 @@ class SectionThree extends Component {
   };
   render() {
     return (
-      <section className="ftco-section text-white" style={sectionThreeStyle}>
+      <section
+        className="ftco-section text-white"
+        style={{ backgroundColor: "#29CB7E" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-12 align-items-center ">
@@ -32,11 +31,22 @@ class SectionThree extends Component {
                       <img src={ImageOne} className="img-fluid" alt="" />
                     </div>
                     <div className="one-half ml-md-5 align-self-center vin-width-40">
-                      <h2 className="mb-4 text-white">
+                      <h2
+                        className="mb-4 text-white"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "2.3rem"
+                        }}
+                      >
                         {this.state.title}
                       </h2>
-                      <ul className="pricing-text">
-                        {this.state.items.map(item=>(<li>{item}</li>))}
+                      <ul
+                        className="pricing-text"
+                        style={{ paddingLeft: "15px" }}
+                      >
+                        {this.state.items.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                   </div>

@@ -9178,3 +9178,29 @@ text-align: center;
         margin-bottom: 10px;
       }
     }
+
+
+
+    .cocobutton:hover{
+      border-color: rgba(255, 255, 255, 0.8) !important;
+      background: none !important;
+      
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+      color: #fff !important;
+    }
+    
+    .cocobutton{
+              padding-top: 0.7rem !important;
+              padding-bottom: 0.7rem !important;
+              padding-right: 3rem !important;
+              padding-left: 3rem !important;
+              border-width: 2px !important;
+               
+    }
+    .otherbutton:hover{
+      
+      background: none !important;
+      
+      color: #29CB7E !important;
+      border-color: #29CB7E !important;
+    }

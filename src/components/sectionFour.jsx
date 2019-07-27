@@ -30,8 +30,8 @@ class SectionFour extends Component {
                     <div className="one-half ml-md-5 text-left vin-width-40">
                       <h1 className="mb-4">{this.state.title}</h1>
                       <ul className="pricing-text">
-                        {this.state.items.map(item => (
-                          <li>{item}</li>
+                        {this.state.items.map((item,index) => (
+                          <li key={index}>{item}</li>
                         ))}
                       </ul>
                       <a

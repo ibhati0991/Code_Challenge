@@ -1,11 +1,5 @@
 import React, { Component } from "react";
 
-var footerStyle = {
-  listStyle: "none"
-};
-var link = {
-  color: "rgb(41, 203, 126)"
-};
 
 class Footer extends Component {
   state = {
@@ -28,45 +22,45 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer className="ftco-section bg-white">
+      <footer className="ftco-section bg-white" style={{borderTop:"2px solid #5f5f5f",padding:"40px 0 40px 0"}}>
         <div className="container">
           <div className="row">
             <div className="col-md">
               <div className="ftco-footer-widget mb-4">
                 <div className="mb-3 text-black">
-                  <ul style={footerStyle}>
+                  <ul style={{listStyle:"none",paddingLeft:"0"}}>
                     <li>
-                      <a href="https://www.cocolevio.com/contact" style={link}>
+                      <a href="https://www.cocolevio.com/contact" style={{color:"#29cb7e"}}>
                         <span className="text"> {this.state.email}</span>
                       </a>
                     </li>
-                    {this.state.address.map(line => (
-                      <li>
+                    {this.state.address.map((line,index) => (
+                      <li key={index}>
                         <span className="text">{line}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <ul className="ftco-footer-social list-unstyled float-md-left float-lft">
-                  <li className="ftco-animate">
-                    <a href={this.state.twitter} className="bg-light">
-                      <span className="icon-twitter" />
+                <ul className="ftco-footer-social list-unstyled float-md-left float-lft" >
+                  <li >
+                    <a href={this.state.twitter} className="bg-light" style={{color:"#29cb7e"}}>
+                      <span className="fa fa-twitter" />
                     </a>
                   </li>
-                  <li className="ftco-animate">
-                    <a href={this.state.facebook} className="bg-light">
+                  <li >
+                    <a href={this.state.facebook} className="bg-light" style={{color:"#29cb7e"}}>
                       <span className="fa fa-facebook" />
                     </a>
                   </li>
-                  <li className="ftco-animate">
-                    <a href={this.state.instagram} className="bg-light">
-                      <span className="icon-instagram" />
+                  <li >
+                    <a href={this.state.instagram} className="bg-light" style={{color:"#29cb7e"}}>
+                      <span className="fa fa-instagram" />
                     </a>
                   </li>
                 </ul>
                 <div className="vin-foot-menu">
-                  {this.state.footerMenu.map(item => (
-                    <a href={item.url}>{item.name}</a>
+                  {this.state.footerMenu.map((item,index) => (
+                    <a key={index} href={item.url}>{item.name}</a>
                   ))}
                 </div>
               </div>
